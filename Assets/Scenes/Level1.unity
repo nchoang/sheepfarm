@@ -1970,6 +1970,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1313068413}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &706156233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,7 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739512190c92399488c8b15e58b3911c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 120
+  TimeLeft: 180
   TimerOn: 0
   TimerTxt: {fileID: 1964960280}
 --- !u!1001 &733316251
