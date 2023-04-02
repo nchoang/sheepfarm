@@ -1,16 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
     List<GameObject> masks;
     public Board board;
+    
+
+    [SerializeField] private VideoPlayer winningVideo;
+    [SerializeField] private GameObject winningRawImage;
 
     // Start is called before the first frame update
     void Start()
     {
         masks = BarnManager.sharedInstance.barn.masks;
+        
     }
 
     // Update is called once per frame
@@ -19,6 +28,8 @@ public class GameManager : MonoBehaviour
         if (CheckEmptyAllGroup(board))
         {
             Debug.Log("win!");
+            StartCoroutine(LoadNextScene());
+            
         }
         else if (CheckFullCondition(masks))
         {
@@ -70,4 +81,15 @@ public class GameManager : MonoBehaviour
         }
         return false;
     }
+
+    IEnumerator LoadNextScene()
+    {
+        winningRawImage.SetActive(true);
+        winningVideo.Play();
+        yield return new WaitForSeconds(Convert.ToSingle(winningVideo.length));
+        SceneManager.LoadScene("MainMenu");
+        
+    }
+
+    
 }
