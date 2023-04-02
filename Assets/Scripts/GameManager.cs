@@ -84,21 +84,11 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-<<<<<<< Updated upstream
         Time.timeScale = 0;
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
-=======
-        winningVideo.gameObject.SetActive(true);
-        winningRawImage.SetActive(true);
-        winningVideo.Play();
-        yield return new WaitForSeconds(Convert.ToSingle(winningVideo.length));
-        //SceneManager.LoadScene("MainMenu");
-        pauseScreen.SetActive(true);
-        
->>>>>>> Stashed changes
     }
 
     IEnumerator LoadNextScene()
