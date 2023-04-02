@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        winningVideo.gameObject.SetActive(true);
         winningRawImage.SetActive(true);
         winningVideo.Play();
         yield return new WaitForSeconds(Convert.ToSingle(winningVideo.length));
