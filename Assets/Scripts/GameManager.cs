@@ -6,11 +6,25 @@ public class GameManager : MonoBehaviour
 {
     List<GameObject> masks;
     public Board board;
+<<<<<<< Updated upstream
+=======
+    
+
+    [SerializeField] private VideoPlayer winningVideo;
+    [SerializeField] private GameObject winningRawImage;
+    [SerializeField] private GameObject pauseScreen;
+
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
     {
         masks = BarnManager.sharedInstance.barn.masks;
+<<<<<<< Updated upstream
+=======
+        
+
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -73,11 +87,21 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+<<<<<<< Updated upstream
         Time.timeScale = 0;
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
+=======
+        winningVideo.gameObject.SetActive(true);
+        winningRawImage.SetActive(true);
+        winningVideo.Play();
+        yield return new WaitForSeconds(Convert.ToSingle(winningVideo.length));
+        //SceneManager.LoadScene("MainMenu");
+        pauseScreen.SetActive(true);
+        
+>>>>>>> Stashed changes
     }
 
 }
