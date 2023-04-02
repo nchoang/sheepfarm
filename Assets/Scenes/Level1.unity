@@ -1688,6 +1688,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1313068413}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &706156233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,7 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739512190c92399488c8b15e58b3911c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 120
+  TimeLeft: 180
   TimerOn: 0
   TimerTxt: {fileID: 1964960280}
 --- !u!1001 &747357142
@@ -3181,7 +3193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208052398381329993, guid: 551a94d24b70ea64bad9f4ded736faed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.194
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 5208052398381329993, guid: 551a94d24b70ea64bad9f4ded736faed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3442,7 +3454,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1577649509
 PrefabInstance:
@@ -3566,7 +3578,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588078286
 GameObject:
