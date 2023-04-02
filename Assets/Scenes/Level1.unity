@@ -3093,8 +3093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 441207894}
-  video: {fileID: 1578726647}
-  rawImage: {fileID: 1615733843}
+  winningVideo: {fileID: 1578726647}
+  winningRawImage: {fileID: 1615733843}
 --- !u!4 &1313068414
 Transform:
   m_ObjectHideFlags: 0
@@ -3271,8 +3271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722cd75228e9b4b4e9e6766ad05c2d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 1578726647}
-  rawImage: {fileID: 0}
 --- !u!4 &1421842046
 Transform:
   m_ObjectHideFlags: 0
@@ -3361,7 +3359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &1578726647
 VideoPlayer:
   m_ObjectHideFlags: 0
