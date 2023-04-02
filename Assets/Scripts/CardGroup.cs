@@ -18,9 +18,13 @@ public class CardGroup : MonoBehaviour
         if (childs.Length != 1)
         {
             childs[1].gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+            childs[1].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+
             for (int i = 2; i < childs.Length; i++)
             {
                 childs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                childs[i].gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
             }
         }
 

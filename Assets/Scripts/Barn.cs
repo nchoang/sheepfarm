@@ -15,8 +15,11 @@ public class Barn : MonoBehaviour
         {
             if (mask.transform.childCount == 0)
             {
+                card.checkCardState = false;
+
                 card.transform.parent = mask.transform;
                 card.transform.position = mask.transform.position;
+
                 Debug.Log("added to barn");
                 return;
             }
@@ -117,6 +120,6 @@ public class Barn : MonoBehaviour
         }
     }
 
-   
+
 
 }

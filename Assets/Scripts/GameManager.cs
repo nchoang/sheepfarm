@@ -66,20 +66,22 @@ public class GameManager : MonoBehaviour
     //kiem tra cac group empty khong ? 
     public bool CheckEmptyAllGroup(Board board)
     {
-        List<GameObject> cardGroups = board.cardGroups;
-        int countEmptyGroup = 0;
-        foreach (GameObject cardGroup in cardGroups)
-        {
-            if (cardGroup.transform.childCount == 0)
-            {
-                countEmptyGroup++;
-            }
-        }
-        if (countEmptyGroup == board.cardGroups.Count)
-        {
-            return true;
-        }
-        return false;
+        //List<GameObject> cardGroups = board.cardGroups;
+        if (board.transform.childCount == 0) return true;
+        else return false;
+        // int countEmptyGroup = 0;
+        // foreach (GameObject cardGroup in cardGroups)
+        // {
+        //     if (cardGroup.transform.childCount == 0)
+        //     {
+        //         countEmptyGroup++;
+        //     }
+        // }
+        // if (countEmptyGroup == board.cardGroups.Count)
+        // {
+        //     return true;
+        // }
+        // return false;
     }
 
     public void PauseGame()
