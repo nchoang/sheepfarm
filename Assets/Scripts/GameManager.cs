@@ -14,27 +14,36 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
+    [SerializeField] private GameObject pauseScreen;
+
+   
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        
         masks = BarnManager.sharedInstance.barn.masks;
-
+        this.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CheckEmptyAllGroup(board))
+        if(this.isActiveAndEnabled)
         {
-            Debug.Log("win!");
-            StartCoroutine(LoadNextScene());
-
+            if (CheckEmptyAllGroup(board))
+            {
+                Debug.Log("win!");
+                StartCoroutine(LoadNextScene());
+                this.enabled = false;
+            }
+            else if (CheckFullCondition(masks))
+            {
+                Debug.Log("Lose");
+            }
         }
-        else if (CheckFullCondition(masks))
-        {
-            Debug.Log("Lose");
-        }
+        
     }
 
     //kiem tra cac barn full khong ? 
@@ -99,7 +108,10 @@ public class GameManager : MonoBehaviour
         winningRawImage.SetActive(true);
         winningVideo.Play();
         yield return new WaitForSeconds(Convert.ToSingle(winningVideo.length));
-        SceneManager.LoadScene("MainMenu");
+        winningRawImage.SetActive(false);
+        winningVideo.gameObject.SetActive(false);
+        winningVideo.Stop();
+        pauseScreen.SetActive(true);
 
     }
 
