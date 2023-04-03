@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f81c3473183d147a3bd9b279df983c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkCardState: 1
 --- !u!50 &9181403272634250654
 Rigidbody2D:
   serializedVersion: 4
