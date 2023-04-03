@@ -31,6 +31,13 @@ public class Barn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateScale();
+    }
+
+    private void UpdateScale()
+    {
+        float width = Camera.main.orthographicSize * 2 * Screen.width / Screen.height;
+        transform.localScale = new Vector3(transform.localScale.x * width/5, transform.localScale.y * width/5, transform.localScale.z);
 
     }
 
