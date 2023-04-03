@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager Instance;
-  
+    [SerializeField] private string sceneNameToLoad;
+
     private void Awake()
     {
         Instance = this; 
@@ -18,9 +19,14 @@ public class ScenesManager : MonoBehaviour
         Level1
     }
 
-    public void LoadScene(int level)
+    public void ReloadScene(int level)
     {
         SceneManager.LoadScene("Level" + level);
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneNameToLoad);
     }
 
     public void LoadNewGame()
@@ -31,8 +37,8 @@ public class ScenesManager : MonoBehaviour
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }   
-    
+    }
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(Scene.MainMenu.ToString());

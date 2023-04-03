@@ -31,7 +31,7 @@ public class TimerScript : MonoBehaviour
             }
         }
     }
-
+    
     void updateTimer(float currentTime)
     {
         currentTime += 1;
@@ -40,6 +40,8 @@ public class TimerScript : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         TimerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+
     }
 
 }
