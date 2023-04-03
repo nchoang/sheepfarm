@@ -27,14 +27,14 @@ public class UIManager : MonoBehaviour
 
     public void GuideButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(0, 1422), 0.7f);
+        mainMenu.DOAnchorPos(new Vector2(-1600, 0), 0.7f);
         guideMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
     }
 
     public void CloseGuideButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
-        guideMenu.DOAnchorPos(new Vector2(0, -1422), 0.7f);
+        guideMenu.DOAnchorPos(new Vector2(1600, 0), 0.7f);
     }
 
     public void SettingButton()
