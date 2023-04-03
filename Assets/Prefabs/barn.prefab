@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 14026749247441675}
   - component: {fileID: 14026749247441673}
   m_Layer: 0
-  m_Name: barn
+  m_Name: Barn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
