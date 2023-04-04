@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
             if (CheckEmptyAllGroup(board))
             {
                 Debug.Log("win!");
+
+                if (SavePlayerSystem.sharedInstance != null)
+                    SavePlayerSystem.sharedInstance.SavePlayer(SavePlayerSystem.sharedInstance.currentLevel + 1);
+
                 StartCoroutine(LoadNextScene());
                 this.enabled = false;
             }

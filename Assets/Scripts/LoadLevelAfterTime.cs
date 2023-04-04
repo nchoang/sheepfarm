@@ -8,6 +8,12 @@ public class LoadLevelAfterTime : MonoBehaviour
 
     private float timeElapsed;
 
+    void Start()
+    {
+        if (SavePlayerSystem.sharedInstance != null)
+            sceneNameToLoad = "Level" + SavePlayerSystem.sharedInstance.currentLevel;
+    }
+
     private void Update()
     {
         timeElapsed += Time.deltaTime;
