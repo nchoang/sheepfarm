@@ -20,7 +20,16 @@ public class LoadLevelAfterTime : MonoBehaviour
 
         if (timeElapsed > delay)
         {
-            SceneManager.LoadScene(sceneNameToLoad);
+            int buildIndex = SceneUtility.GetBuildIndexByScenePath(sceneNameToLoad);
+
+            if (buildIndex != -1)
+            {
+                SceneManager.LoadScene(sceneNameToLoad);
+            }
+            else
+            {
+                ScenesManager.Instance.LoadNewGame();
+            }
         }
     }
 }
