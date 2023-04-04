@@ -2493,8 +2493,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &793317653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2609,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> d4c0f4dc5c70cde164ce7334a1ebecc593f14eb6
 --- !u!1001 &797311093
 PrefabInstance:
   m_ObjectHideFlags: 0
