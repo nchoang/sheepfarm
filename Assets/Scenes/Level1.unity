@@ -715,6 +715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305593545}
+  - component: {fileID: 305593549}
   - component: {fileID: 305593548}
   - component: {fileID: 305593547}
   - component: {fileID: 305593546}
@@ -900,6 +901,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305593544}
   m_CullTransparentMesh: 1
+--- !u!223 &305593549
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305593544}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -538418391
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &337743105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,8 +1748,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -954406797
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e3cf4aa8dc76f82418de9482f55173ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2120,6 +2142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720798214}
+  - component: {fileID: 720798218}
   - component: {fileID: 720798216}
   - component: {fileID: 720798215}
   - component: {fileID: 720798217}
@@ -2205,6 +2228,27 @@ MonoBehaviour:
   TimeLeft: 180
   TimerOn: 0
   TimerTxt: {fileID: 1964960280}
+--- !u!223 &720798218
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720798213}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -1762857765
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &733316251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2755,6 +2799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891189424}
+  - component: {fileID: 891189428}
   - component: {fileID: 891189426}
   - component: {fileID: 891189425}
   - component: {fileID: 891189427}
@@ -2842,6 +2887,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneNameToLoad: 
+--- !u!223 &891189428
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891189423}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -954406797
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &900532578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,8 +3439,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1762857765
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e90f526d02d01b4479a7b15941335096, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3483,9 +3549,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 215574673
-  m_SortingLayer: 10
-  m_SortingOrder: 4
+  m_SortingLayerID: -538418391
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1259126132, guid: 396310bb902f2b545b80faf9e886250c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3854,8 +3920,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -538418391
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 612580c1b0cfa224582393dc3400fabf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5718,6 +5784,7 @@ GameObject:
   - component: {fileID: 1615733844}
   - component: {fileID: 1615733846}
   - component: {fileID: 1615733845}
+  - component: {fileID: 1615733847}
   m_Layer: 5
   m_Name: WinningRaw
   m_TagString: Untagged
@@ -5780,6 +5847,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615733843}
   m_CullTransparentMesh: 1
+--- !u!223 &1615733847
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615733843}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -954406797
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1661426454
 PrefabInstance:
   m_ObjectHideFlags: 0
