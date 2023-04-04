@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
             }
             else if (CheckFullCondition(masks))
             {
+                //lose popup
                 Debug.Log("Lose");
             }
         }
@@ -122,9 +123,7 @@ public class GameManager : MonoBehaviour
         winningVideo.Stop();
         pauseScreen.SetActive(true);
 
-        SceneManager.LoadScene("Loading");
-
-        //PauseGame();
+        PauseGame();
     }
 
 
