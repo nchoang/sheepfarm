@@ -2650,6 +2650,7 @@ MonoBehaviour:
   - {fileID: 1101769188}
   - {fileID: 637586709}
   - {fileID: 314174327}
+  restackCardSpeed: 10
 --- !u!212 &793317656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4760,6 +4761,7 @@ MonoBehaviour:
   winningVideo: {fileID: 1578726647}
   winningRawImage: {fileID: 1615733843}
   pauseScreen: {fileID: 527515491}
+  sheepLicking: {fileID: 1087883985}
 --- !u!4 &1313068414
 Transform:
   m_ObjectHideFlags: 0
