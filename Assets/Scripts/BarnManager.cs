@@ -29,20 +29,23 @@ public class BarnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousePosWorld2D = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        GameObject result = GetHighestRaycastTarget(mousePosWorld2D);
-
-        if (result != null)
-            // Do Stuff example:
-            Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerID}");
-
-        if (Input.GetMouseButtonDown(0)
-            && result != null)
+        foreach (Touch touch in Input.touches)
         {
-            if (result.GetComponent<Card>() != null)
+            Vector2 mousePosWorld2D = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
+
+            GameObject result = GetHighestRaycastTarget(mousePosWorld2D);
+
+            if (result != null)
+                // Do Stuff example:
+                Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerID}");
+
+            if (touch.phase == TouchPhase.Began
+                && result != null)
             {
-                barn.AddCard(result.GetComponent<Card>());
+                if (result.GetComponent<Card>() != null)
+                {
+                    barn.AddCard(result.GetComponent<Card>());
+                }
             }
         }
     }
