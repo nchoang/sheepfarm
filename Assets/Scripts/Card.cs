@@ -54,4 +54,7 @@ public class Card : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
+
+
 }

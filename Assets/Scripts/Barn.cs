@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
 
 public class Barn : MonoBehaviour
 {
@@ -19,7 +21,8 @@ public class Barn : MonoBehaviour
 
                 card.transform.parent = mask.transform;
                 card.transform.position = mask.transform.position;
-
+                Debug.Log(card.transform.position);
+                Debug.Log(mask.transform.position);
                 Debug.Log("added to barn");
                 return;
             }
@@ -100,24 +103,65 @@ public class Barn : MonoBehaviour
         }
     }
 
+    [SerializeField] private float restackCardSpeed = 10.0f;
+    
+
     private void RestackCards()
     {
         for (int i = 0; i < masks.Count; i++)
         {
+            //Find empty slot mask
             if (masks[i].transform.childCount == 0)
+            {
                 for (int j = i + 1; j < masks.Count; j++)
                 {
+                    //Find unempty slot mask
                     if (masks[j].transform.childCount != 0)
                     {
-                        masks[j].transform.GetChild(0).parent = masks[i].transform;
+                        
 
-                        masks[i].transform.GetChild(0).transform.position = masks[i].transform.position;
+                        //Select card in mask 
+                        Card card = GetCardInMask(masks[j]);
+                        
+                        //Move card to empty slot mask
+                        StartCoroutine(MoveCard(card, masks[i]));
+                        card.transform.SetParent(masks[i].transform);
+
+
                         break;
                     }
 
                 }
+            }
+                
         }
     }
+
+    private Card GetCardInMask(GameObject mask)
+    {
+        return mask.transform.GetChild(0).gameObject.GetComponent<Card>() ;
+    }
+
+    private IEnumerator MoveCard(Card card, GameObject mask)
+    {
+        float elapsedTime = 0.0f;
+        while (elapsedTime < restackCardSpeed)
+        {
+            Vector3 moveDir = mask.transform.position;
+            card.transform.position = Vector3.Slerp(card.transform.position, moveDir, elapsedTime / restackCardSpeed);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+            
+        }
+
+    }
+  
+
+
+   
+
+
+
 
 
 
