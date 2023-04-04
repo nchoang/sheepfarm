@@ -10,7 +10,7 @@ public class ScenesManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this; 
+        Instance = this;
     }
 
     public enum Scene

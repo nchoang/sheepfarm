@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System.Text.RegularExpressions;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winningRawImage;
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject sheepLicking;
+    [SerializeField] private GameObject pauseBtn;
 
 
 
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("win!");
 
                 if (SavePlayerSystem.sharedInstance != null)
-                    SavePlayerSystem.sharedInstance.SavePlayer(SavePlayerSystem.sharedInstance.currentLevel + 1);
+                    SavePlayerSystem.sharedInstance.SavePlayer(int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value) + 1);
 
                 StartCoroutine(LoadNextScene());
                 this.enabled = false;
@@ -109,6 +111,7 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         sheepLicking.SetActive(false);
+        pauseBtn.SetActive(false);
 
         winningVideo.gameObject.SetActive(true);
         winningRawImage.SetActive(true);
@@ -119,6 +122,9 @@ public class GameManager : MonoBehaviour
         winningVideo.Stop();
         pauseScreen.SetActive(true);
 
+        SceneManager.LoadScene("Loading");
+
+        //PauseGame();
     }
 
 

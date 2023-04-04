@@ -3958,6 +3958,7 @@ MonoBehaviour:
   winningRawImage: {fileID: 1615733843}
   pauseScreen: {fileID: 527515491}
   sheepLicking: {fileID: 1087883985}
+  pauseBtn: {fileID: 305593544}
 --- !u!4 &1313068414
 Transform:
   m_ObjectHideFlags: 0
