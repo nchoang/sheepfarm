@@ -15,9 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject sheepLicking;
 
-   
-    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.isActiveAndEnabled)
+        if (this.isActiveAndEnabled)
         {
             if (CheckEmptyAllGroup(board))
             {
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Lose");
             }
         }
-        
+
     }
 
     //kiem tra cac barn full khong ? 
@@ -103,6 +104,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        sheepLicking.SetActive(false);
+
         winningVideo.gameObject.SetActive(true);
         winningRawImage.SetActive(true);
         winningVideo.Play();
