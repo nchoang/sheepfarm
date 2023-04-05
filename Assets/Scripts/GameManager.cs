@@ -12,15 +12,11 @@ public class GameManager : MonoBehaviour
     List<GameObject> masks;
     public Board board;
 
-
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject sheepLicking;
     [SerializeField] private GameObject pauseBtn;
-
-
-
 
     // Start is called before the first frame update
     void Start()
