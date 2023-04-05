@@ -15,37 +15,37 @@ public class UIManager : MonoBehaviour
 
     public void LevelsButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(800, 0), 0.7f);
+        mainMenu.DOAnchorPos(new Vector2(1079, 0), 0.7f);
         levelsMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
     }
 
     public void CloseLevelsButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
-        levelsMenu.DOAnchorPos(new Vector2(-800, 0), 0.7f);
+        levelsMenu.DOAnchorPos(new Vector2(-1079, 0), 0.7f);
     }
 
     public void GuideButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(-1600, 0), 0.7f);
+        mainMenu.DOAnchorPos(new Vector2(-2162, 0), 0.7f);
         guideMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
     }
 
     public void CloseGuideButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
-        guideMenu.DOAnchorPos(new Vector2(1600, 0), 0.7f);
+        guideMenu.DOAnchorPos(new Vector2(2162, 0), 0.7f);
     }
 
     public void SettingButton()
     {
-        mainMenu.DOAnchorPos(new Vector2(-800, 0), 0.7f);
+        mainMenu.DOAnchorPos(new Vector2(-1082, 0), 0.7f);
         settingMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
     }
 
     public void CloseSettingButton()
     {
         mainMenu.DOAnchorPos(new Vector2(0, 0), 0.7f);
-        settingMenu.DOAnchorPos(new Vector2(800, 0), 0.7f);
+        settingMenu.DOAnchorPos(new Vector2(1079, 0), 0.7f);
     }
 }
