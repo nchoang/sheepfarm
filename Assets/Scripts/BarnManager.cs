@@ -46,7 +46,8 @@ public class BarnManager : MonoBehaviour
             {
                 if (result.GetComponent<Card>() != null)
                 {
-                    barn.AddCard(result.GetComponent<Card>());
+                    if (result.GetComponent<Card>().clickable)
+                        barn.AddCard(result.GetComponent<Card>());
                 }
             }
         }

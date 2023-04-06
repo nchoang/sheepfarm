@@ -4,33 +4,17 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    [HideInInspector]
     public bool checkCardState = true;
+    [HideInInspector]
+    public bool clickable = true;
 
     private SpriteRenderer mySpriteRenderer;
     private BoxCollider2D myBoxCollider2D;
 
-    //private Barn barn;
-
-    // private Sprite img;
-    // private float weight;
-    // private float height;
-
-    // private void OnMouseDown()
-    // {
-    //     Debug.Log("clicked");
-
-    //     if (transform.parent.gameObject.CompareTag("Mask"))
-    //     {
-    //         return;
-    //     }
-
-    //     barn.AddCard(this);
-    // }
     // Start is called before the first frame update
     void Start()
     {
-        // img = this.GetComponent<SpriteRenderer>().sprite;
-        //barn = BarnManager.sharedInstance.barn;
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myBoxCollider2D = GetComponent<BoxCollider2D>();
     }
@@ -40,7 +24,7 @@ public class Card : MonoBehaviour
     {
         if (checkCardState)
         {
-            myBoxCollider2D.enabled = true;
+            clickable = true;
             mySpriteRenderer.color = Color.white;
 
             Collider2D[] objs = Physics2D.OverlapBoxAll((Vector2)transform.position, myBoxCollider2D.size, 0);
@@ -50,14 +34,15 @@ public class Card : MonoBehaviour
                 if (obj.gameObject.GetComponent<SpriteRenderer>().sortingLayerName == mySpriteRenderer.sortingLayerName)
                     if (obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder > mySpriteRenderer.sortingOrder)
                     {
-                        myBoxCollider2D.enabled = false;
+                        clickable = false;
                         mySpriteRenderer.color = Color.grey;
                     }
             }
         }
         else
         {
-            myBoxCollider2D.enabled = false;
+            clickable = false;
+            mySpriteRenderer.color = Color.white;
         }
     }
 
