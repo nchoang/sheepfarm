@@ -28,7 +28,7 @@ public class LoadLevelAfterTime : MonoBehaviour
             }
             else
             {
-                ScenesManager.Instance.LoadNewGame();
+                ScenesManager.Instance.LoadMainMenu();
             }
         }
     }
