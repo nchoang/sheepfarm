@@ -6,6 +6,8 @@ public class BarnManager : MonoBehaviour
 {
     public static BarnManager sharedInstance = null;
 
+    public string LayerNameToCheck = "LayerCard";
+
     public Barn barn;
 
     void Awake()
@@ -33,11 +35,11 @@ public class BarnManager : MonoBehaviour
         {
             Vector2 mousePosWorld2D = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
 
-            GameObject result = GetHighestRaycastTarget(mousePosWorld2D);
+            GameObject result = GetHighestRaycastTarget(mousePosWorld2D, LayerNameToCheck);
 
             if (result != null)
                 // Do Stuff example:
-                Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerID}");
+                Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerName}, Order: {result.GetComponent<SpriteRenderer>().sortingOrder}");
 
             if (touch.phase == TouchPhase.Began
                 && result != null)
@@ -52,7 +54,7 @@ public class BarnManager : MonoBehaviour
 
     // Get highest RaycastTarget based on the Sortinglayer
     // Note: If multiple Objects have the same SortingLayer (e.g. 42) and this is also the highest SortingLayer, then the Function will return the last one it found
-    private GameObject GetHighestRaycastTarget(Vector2 mousePos)
+    private GameObject GetHighestRaycastTarget(Vector2 mousePos, string LayerNameToCheck)
     {
         GameObject topLayer = null;
         RaycastHit2D[] hit = Physics2D.RaycastAll(mousePos, Vector2.zero);
@@ -65,14 +67,17 @@ public class BarnManager : MonoBehaviour
             // Check if the found SpriteRenderer uses the relevant SortingLayer
             if (spriteRenderer != null)
             {
-                if (topLayer == null)
+                if (spriteRenderer.sortingLayerName == LayerNameToCheck)
                 {
-                    topLayer = spriteRenderer.transform.gameObject;
-                }
+                    if (topLayer == null)
+                    {
+                        topLayer = spriteRenderer.transform.gameObject;
+                    }
 
-                if (spriteRenderer.sortingLayerID >= topLayer.GetComponent<SpriteRenderer>().sortingLayerID)
-                {
-                    topLayer = ray.transform.gameObject;
+                    if (spriteRenderer.sortingOrder >= topLayer.GetComponent<SpriteRenderer>().sortingOrder)
+                    {
+                        topLayer = ray.transform.gameObject;
+                    }
                 }
             }
 
