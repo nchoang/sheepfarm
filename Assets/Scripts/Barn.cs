@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Barn : MonoBehaviour
 {
+    [SerializeField] private float restackCardSpeed = 10.0f;
     private List<Card> cards = new List<Card>();
     public List<GameObject> masks;
 
@@ -18,11 +19,10 @@ public class Barn : MonoBehaviour
             if (mask.transform.childCount == 0)
             {
                 card.checkCardState = false;
-
+                StartCoroutine(MoveCard(card, mask, restackCardSpeed));
                 card.transform.parent = mask.transform;
-                card.transform.position = mask.transform.position;
-                Debug.Log(card.transform.position);
-                Debug.Log(mask.transform.position);
+                //card.transform.position = mask.transform.position;
+                Debug.Log("coroutine add done");
                 Debug.Log("added to barn");
                 return;
             }
@@ -103,11 +103,9 @@ public class Barn : MonoBehaviour
         }
     }
 
-    [SerializeField] private float restackCardSpeed = 10.0f;
-    
-
     private void RestackCards()
     {
+
         for (int i = 0; i < masks.Count; i++)
         {
             //Find empty slot mask
@@ -118,14 +116,14 @@ public class Barn : MonoBehaviour
                     //Find unempty slot mask
                     if (masks[j].transform.childCount != 0)
                     {
-                        
 
+                        
                         //Select card in mask 
                         Card card = GetCardInMask(masks[j]);
-                        
+
                         //Move card to empty slot mask
-                        StartCoroutine(MoveCard(card, masks[i]));
-                        card.transform.SetParent(masks[i].transform);
+                        StartCoroutine(MoveCard(card, masks[i], restackCardSpeed));
+                        card.transform.parent = masks[i].transform;
 
 
                         break;
@@ -142,23 +140,24 @@ public class Barn : MonoBehaviour
         return mask.transform.GetChild(0).gameObject.GetComponent<Card>() ;
     }
 
-    private IEnumerator MoveCard(Card card, GameObject mask)
+    private IEnumerator MoveCard(Card card, GameObject mask, float speed)
     {
         float elapsedTime = 0.0f;
-        while (elapsedTime < restackCardSpeed)
+        
+        while (elapsedTime < speed)
         {
             Vector3 moveDir = mask.transform.position;
-            card.transform.position = Vector3.Slerp(card.transform.position, moveDir, elapsedTime / restackCardSpeed);
-            elapsedTime += Time.deltaTime;
+            card.transform.position = Vector3.Lerp(card.transform.position, moveDir, elapsedTime / speed);
+            Debug.Log(Time.deltaTime);
+            elapsedTime += 0.016f;
             yield return null;
-            
+
         }
 
     }
-  
 
 
-   
+
 
 
 

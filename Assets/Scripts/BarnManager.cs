@@ -41,18 +41,22 @@ public class BarnManager : MonoBehaviour
                 // Do Stuff example:
                 Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerName}, Order: {result.GetComponent<SpriteRenderer>().sortingOrder}");
 
-            if (touch.phase == TouchPhase.Began
-                && result != null)
+            if (touch.phase == TouchPhase.Began  && result != null)
             {
                 if (result.GetComponent<Card>() != null)
                 {
                     if (result.GetComponent<Card>().clickable)
+                    {
                         barn.AddCard(result.GetComponent<Card>());
+                         
+                    }
+                        
                 }
             }
         }
     }
 
+   
     // Get highest RaycastTarget based on the Sortinglayer
     // Note: If multiple Objects have the same SortingLayer (e.g. 42) and this is also the highest SortingLayer, then the Function will return the last one it found
     private GameObject GetHighestRaycastTarget(Vector2 mousePos, string LayerNameToCheck)
