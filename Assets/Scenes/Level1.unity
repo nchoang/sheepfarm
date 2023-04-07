@@ -4242,6 +4242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0755677f5a7b8141a20eacec5291da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restackCardSpeed: 1
   masks:
   - {fileID: 2091714741}
   - {fileID: 1120058100}
@@ -4249,7 +4250,6 @@ MonoBehaviour:
   - {fileID: 1968669964}
   - {fileID: 1225714658}
   - {fileID: 1354450353}
-  restackCardSpeed: 1
 --- !u!224 &1119654107
 RectTransform:
   m_ObjectHideFlags: 0
