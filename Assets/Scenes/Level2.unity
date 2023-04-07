@@ -3523,6 +3523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0755677f5a7b8141a20eacec5291da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restackCardSpeed: 1
   masks:
   - {fileID: 2091714741}
   - {fileID: 1120058100}
@@ -3530,7 +3531,6 @@ MonoBehaviour:
   - {fileID: 1968669964}
   - {fileID: 1225714658}
   - {fileID: 1354450353}
-  restackCardSpeed: 1
 --- !u!224 &1119654107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4387,7 +4387,7 @@ MonoBehaviour:
   board: {fileID: 441207894}
   winningVideo: {fileID: 1578726647}
   winningRawImage: {fileID: 1615733843}
-  winningPopup: {fileID: 0}
+  winningPopup: {fileID: 527515491}
   sheepLicking: {fileID: 563706405}
   pauseBtn: {fileID: 1893057564}
 --- !u!4 &1313068414
