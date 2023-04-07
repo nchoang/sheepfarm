@@ -697,7 +697,7 @@ MonoBehaviour:
   board: {fileID: 1775976325}
   winningVideo: {fileID: 686027458}
   winningRawImage: {fileID: 1751400686}
-  pauseScreen: {fileID: 1398473511}
+  winningPopup: {fileID: 0}
   sheepLicking: {fileID: 836090186}
   pauseBtn: {fileID: 564689047}
 --- !u!4 &211180899
@@ -1721,7 +1721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 516.4, y: -157.4}
+  m_AnchoredPosition: {x: 514.2606, y: -157.4}
   m_SizeDelta: {x: 110.41, y: 77.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595239451
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -17.130219, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2948,7 +2948,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3e230ebedde58e84690a77608a1417e1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fee5ab8cfecf5e445b59e4aa76c9bfc3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.542
   m_Pitch: 1
@@ -5966,7 +5966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 101.100006, y: -151.47}
+  m_AnchoredPosition: {x: 95.47801, y: -151.47}
   m_SizeDelta: {x: 143.41, y: 52.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1708134171

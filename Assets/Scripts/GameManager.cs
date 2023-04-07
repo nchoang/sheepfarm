@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
-    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject winningPopup;
     [SerializeField] private GameObject sheepLicking;
     [SerializeField] private GameObject pauseBtn;
 
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         winningRawImage.SetActive(false);
         winningVideo.gameObject.SetActive(false);
         winningVideo.Stop();
-        pauseScreen.SetActive(true);
+        winningPopup.SetActive(true);
 
         PauseGame();
     }

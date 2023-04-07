@@ -2904,8 +2904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.25, y: -29.85}
-  m_SizeDelta: {x: 19.26, y: 16.44}
+  m_AnchoredPosition: {x: -8.8, y: -20.7}
+  m_SizeDelta: {x: 12.945, y: 11.034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999181396
 MonoBehaviour:
@@ -3294,7 +3294,7 @@ SpriteRenderer:
   m_SortingLayerID: -1762857765
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d59d7980ad088ae498188e82740fd9f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e90f526d02d01b4479a7b15941335096, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3314,7 +3314,7 @@ RectTransform:
   m_GameObject: {fileID: 1034731319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 110, y: 109.441025, z: 209.28835}
+  m_LocalScale: {x: 80, y: 79.593475, z: 152.20972}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 382527907}
@@ -4387,7 +4387,7 @@ MonoBehaviour:
   board: {fileID: 441207894}
   winningVideo: {fileID: 1578726647}
   winningRawImage: {fileID: 1615733843}
-  pauseScreen: {fileID: 527515491}
+  winningPopup: {fileID: 0}
   sheepLicking: {fileID: 563706405}
   pauseBtn: {fileID: 1893057564}
 --- !u!4 &1313068414
@@ -4654,7 +4654,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a014766bf32e28647aa928fa29cfbfe7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fee5ab8cfecf5e445b59e4aa76c9bfc3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.437
   m_Pitch: 1
@@ -5402,7 +5402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2771465939028632402, guid: feeb5a1c51594584f90c22d71a247c34, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2771465939028632402, guid: feeb5a1c51594584f90c22d71a247c34, type: 3}
       propertyPath: m_SortingLayerID
@@ -6385,8 +6385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.85, y: -29.85}
-  m_SizeDelta: {x: 734.012, y: 653.64}
+  m_AnchoredPosition: {x: 9.2, y: -20.699997}
+  m_SizeDelta: {x: 506.4, y: 438.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044293017
 MonoBehaviour:
@@ -6615,7 +6615,7 @@ RectTransform:
   m_GameObject: {fileID: 2077422900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 527515494}
