@@ -962,6 +962,7 @@ MonoBehaviour:
   winningPopup: {fileID: 1788057018}
   sheepLicking: {fileID: 0}
   pauseBtn: {fileID: 372386534}
+  popUp: {fileID: 1193240334}
 --- !u!4 &329650713
 Transform:
   m_ObjectHideFlags: 0
@@ -3730,6 +3731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LayerNameToCheck: LayerCard
   barn: {fileID: 890284010}
+  CheckCard: 1
 --- !u!4 &1397730721
 Transform:
   m_ObjectHideFlags: 0

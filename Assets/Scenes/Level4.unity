@@ -700,6 +700,7 @@ MonoBehaviour:
   winningPopup: {fileID: 1398473511}
   sheepLicking: {fileID: 836090186}
   pauseBtn: {fileID: 564689047}
+  popUp: {fileID: 932460902}
 --- !u!4 &211180899
 Transform:
   m_ObjectHideFlags: 0
@@ -1197,6 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LayerNameToCheck: LayerCard
   barn: {fileID: 1518854476}
+  CheckCard: 1
 --- !u!4 &498925532
 Transform:
   m_ObjectHideFlags: 0
@@ -6533,7 +6535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5694f076d5e8544c9764e789a976a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardGroups: []
+  layers: []
 --- !u!4 &1775976326
 Transform:
   m_ObjectHideFlags: 0
