@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    public List<GameObject> cardGroups;
+    public List<Layer> layers;
+
+
+
 }

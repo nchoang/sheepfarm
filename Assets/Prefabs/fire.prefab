@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7240393066009681205}
   - component: {fileID: 5257605212232887498}
-  - component: {fileID: -1444738738635786663}
-  - component: {fileID: 1619579397729311768}
+  - component: {fileID: -3434677486141669950}
+  - component: {fileID: -545384847794669788}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -538418391
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d754ccbeab0e53c4c9d622d8d6cff6d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,7 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-1444738738635786663
+--- !u!114 &-3434677486141669950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707804184716134856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f81c3473183d147a3bd9b279df983c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkCardState: 1
+  clickable: 1
+--- !u!61 &-545384847794669788
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +110,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -112,17 +126,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.8152174}
   m_EdgeRadius: 0
---- !u!114 &1619579397729311768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3707804184716134856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f81c3473183d147a3bd9b279df983c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkCardState: 1
-  clickable: 1
