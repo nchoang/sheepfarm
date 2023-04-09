@@ -2561,7 +2561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136481986021708390, guid: f0fc8af1216d1e046bb47529d85db6dc, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5136481986021708391, guid: f0fc8af1216d1e046bb47529d85db6dc, type: 3}
       propertyPath: m_RootOrder
@@ -4397,7 +4397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3002087068734794645, guid: dcbbcedb8b7746147b95955863d2dd4f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3002087068734794645, guid: dcbbcedb8b7746147b95955863d2dd4f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4433,7 +4433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657574308455427765, guid: dcbbcedb8b7746147b95955863d2dd4f, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7657574308455427765, guid: dcbbcedb8b7746147b95955863d2dd4f, type: 3}
       propertyPath: m_SortingLayerID
@@ -5074,7 +5074,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 757478021869075331, guid: 933b281e6267fbc468c20eb28f412666, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3842322027843604700, guid: 933b281e6267fbc468c20eb28f412666, type: 3}
       propertyPath: m_Name
@@ -5401,7 +5401,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2345307386533393646, guid: e296e12ba5d6aba40bfa21ac266d3d3c, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2710763839095413696, guid: e296e12ba5d6aba40bfa21ac266d3d3c, type: 3}
       propertyPath: m_Name
@@ -5517,7 +5517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5257605212232887498, guid: 503a00ad1494ce14eaba0d6e15af6a75, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7240393066009681205, guid: 503a00ad1494ce14eaba0d6e15af6a75, type: 3}
       propertyPath: m_RootOrder
@@ -8027,7 +8027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95.47801, y: -151.47}
+  m_AnchoredPosition: {x: 97, y: -145.1}
   m_SizeDelta: {x: 143.41, y: 52.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1953005904
@@ -8059,8 +8059,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283012095
+  m_fontColor: {r: 1, g: 0.57517785, b: 0.28773582, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8466,7 +8466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136481986021708390, guid: f0fc8af1216d1e046bb47529d85db6dc, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5136481986021708391, guid: f0fc8af1216d1e046bb47529d85db6dc, type: 3}
       propertyPath: m_RootOrder
