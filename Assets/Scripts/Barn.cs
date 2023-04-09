@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Barn : MonoBehaviour
 {
+    [SerializeField] private float moveCardSpeed = 5.0f;
     [SerializeField] private float restackCardSpeed = 10.0f;
     private List<Card> cards = new List<Card>();
     public List<GameObject> masks;
@@ -19,7 +20,7 @@ public class Barn : MonoBehaviour
             if (mask.transform.childCount == 0)
             {
                 card.checkCardState = false;
-                StartCoroutine(MoveCard(card, mask, restackCardSpeed));
+                StartCoroutine(MoveCard(card, mask, moveCardSpeed));
                 card.transform.parent = mask.transform;
                 //card.transform.position = mask.transform.position;
                 Debug.Log("coroutine add done");
