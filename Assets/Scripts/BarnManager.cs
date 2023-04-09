@@ -10,6 +10,8 @@ public class BarnManager : MonoBehaviour
 
     public Barn barn;
 
+    public bool CheckCard;
+
     void Awake()
     {
         if (sharedInstance != null && sharedInstance != this)
@@ -31,29 +33,33 @@ public class BarnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Touch touch in Input.touches)
+        if (CheckCard)
         {
-            Vector2 mousePosWorld2D = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
-
-            GameObject result = GetHighestRaycastTarget(mousePosWorld2D, LayerNameToCheck);
-
-            if (result != null)
-                // Do Stuff example:
-                Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerName}, Order: {result.GetComponent<SpriteRenderer>().sortingOrder}");
-
-            if (touch.phase == TouchPhase.Began  && result != null)
+            foreach (Touch touch in Input.touches)
             {
-                if (result.GetComponent<Card>() != null)
+                Vector2 mousePosWorld2D = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
+
+                GameObject result = GetHighestRaycastTarget(mousePosWorld2D, LayerNameToCheck);
+
+                if (result != null)
+                    // Do Stuff example:
+                    Debug.Log($"Highest Layer: {result.GetComponent<SpriteRenderer>().sortingLayerName}, Order: {result.GetComponent<SpriteRenderer>().sortingOrder}");
+
+                if (touch.phase == TouchPhase.Began && result != null)
                 {
-                    if (result.GetComponent<Card>().clickable)
+                    if (result.GetComponent<Card>() != null)
                     {
-                        barn.AddCard(result.GetComponent<Card>());
-                         
+                        if (result.GetComponent<Card>().clickable)
+                        {
+                            barn.AddCard(result.GetComponent<Card>());
+
+                        }
+
                     }
-                        
                 }
             }
         }
+        
     }
 
    

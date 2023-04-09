@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winningPopup;
     [SerializeField] private GameObject sheepLicking;
     [SerializeField] private GameObject pauseBtn;
+    [SerializeField] private GameObject popUp;
 
     // Start is called before the first frame update
     void Start()
@@ -118,6 +119,7 @@ public class GameManager : MonoBehaviour
         winningVideo.gameObject.SetActive(false);
         winningVideo.Stop();
         winningPopup.SetActive(true);
+        sheepLicking.SetActive(true);
 
         PauseGame();
     }
