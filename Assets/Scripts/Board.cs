@@ -26,7 +26,7 @@ public class Board : MonoBehaviour
             Layer layer = layers[i];
             ReplaceCard(layer, frequencies, indices, cardReplaceFreq);
         }
-        Debug.Log("-----");
+       
         
     }
 
@@ -48,8 +48,6 @@ public class Board : MonoBehaviour
             while(!foundReplacement && indices.Count > 0)
             {
                 randomIndex = UnityEngine.Random.Range(indices.Min(), indices.Max() + 1);
-
-                Debug.Log(randomIndex);
 
                 if (cardReplaceFreq[randomIndex] < frequencies[randomIndex])
                 {
@@ -110,15 +108,12 @@ public class Board : MonoBehaviour
         {
             do
             {
-                newFreq[i] = UnityEngine.Random.Range(3, 10);
+                newFreq[i] = UnityEngine.Random.Range(3, 7);
             }
             while (newFreq[i] % 3 != 0);
             
         }
-        foreach(int i in newFreq)
-        {
-            Debug.Log("FREQ " + i);
-        }
+       
         return newFreq;
     }
 
@@ -141,7 +136,6 @@ public class Board : MonoBehaviour
             {
                 for (int i = left; i <= right; i++)
                 {
-                    Debug.Log(i);
                     ans.Add(i);
                 }
                 break;
