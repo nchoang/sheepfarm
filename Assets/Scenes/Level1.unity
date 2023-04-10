@@ -5435,7 +5435,7 @@ MonoBehaviour:
   winningPopup: {fileID: 527515491}
   sheepLicking: {fileID: 720798213}
   pauseBtn: {fileID: 305593544}
-  popUp: {fileID: 527515491}
+  popUp: {fileID: 1130137596}
 --- !u!4 &1313068414
 Transform:
   m_ObjectHideFlags: 0

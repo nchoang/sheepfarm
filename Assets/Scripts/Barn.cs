@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Barn : MonoBehaviour
 {
+    [SerializeField] private float moveCardSpeed = 5.0f;
     [SerializeField] private float restackCardSpeed = 10.0f;
     private List<Card> cards = new List<Card>();
     public List<GameObject> masks;
@@ -19,7 +20,7 @@ public class Barn : MonoBehaviour
             if (mask.transform.childCount == 0)
             {
                 card.checkCardState = false;
-                StartCoroutine(MoveCard(card, mask, restackCardSpeed));
+                StartCoroutine(MoveCard(card, mask, moveCardSpeed));
                 card.transform.parent = mask.transform;
                 //card.transform.position = mask.transform.position;
                 Debug.Log("coroutine add done");
@@ -117,7 +118,7 @@ public class Barn : MonoBehaviour
                     if (masks[j].transform.childCount != 0)
                     {
 
-                        
+
                         //Select card in mask 
                         Card card = GetCardInMask(masks[j]);
 
@@ -131,20 +132,20 @@ public class Barn : MonoBehaviour
 
                 }
             }
-                
+
         }
     }
 
     private Card GetCardInMask(GameObject mask)
     {
-        return mask.transform.GetChild(0).gameObject.GetComponent<Card>() ;
+        return mask.transform.GetChild(0).gameObject.GetComponent<Card>();
     }
 
     private IEnumerator MoveCard(Card card, GameObject mask, float speed)
     {
         float elapsedTime = 0.0f;
-        
-        while (elapsedTime < speed)
+
+        while (elapsedTime < speed && card != null)
         {
             Vector3 moveDir = mask.transform.position;
             card.transform.position = Vector3.Lerp(card.transform.position, moveDir, elapsedTime / speed);

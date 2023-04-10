@@ -1,28 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.IO;
+using System.Linq;
 
 public class Layer : MonoBehaviour
 {
-    public List<Card> cards;
-
-    private void Update()
+    public int GetCountChild()
     {
-       
+        return this.transform.childCount;
     }
 
-    private void Start()
-    {
-      
-        foreach (Card card in cards) 
-        { 
-            Instantiate(card, this.gameObject.transform, true);
-        }
-        
-
-    }
-
-    
 
 }

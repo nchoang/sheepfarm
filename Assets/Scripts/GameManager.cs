@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         masks = BarnManager.sharedInstance.barn.masks;
         this.enabled = true;
+        
     }
 
     // Update is called once per frame
@@ -43,8 +44,14 @@ public class GameManager : MonoBehaviour
             }
             else if (CheckFullCondition(masks))
             {
-                //lose popup
                 Debug.Log("Lose");
+                //lose popup
+                popUp.SetActive(true);
+
+                if (SavePlayerSystem.sharedInstance != null)
+                    SavePlayerSystem.sharedInstance.SavePlayer(int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value));
+
+                this.enabled = false;
             }
         }
 

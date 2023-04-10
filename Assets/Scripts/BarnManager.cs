@@ -10,7 +10,7 @@ public class BarnManager : MonoBehaviour
 
     public Barn barn;
 
-    public bool CheckCard;
+    public bool CheckCard = true;
 
     void Awake()
     {
@@ -59,10 +59,10 @@ public class BarnManager : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
-   
+
     // Get highest RaycastTarget based on the Sortinglayer
     // Note: If multiple Objects have the same SortingLayer (e.g. 42) and this is also the highest SortingLayer, then the Function will return the last one it found
     private GameObject GetHighestRaycastTarget(Vector2 mousePos, string LayerNameToCheck)
