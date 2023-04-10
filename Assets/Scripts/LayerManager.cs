@@ -5,7 +5,7 @@ using UnityEngine;
 public class LayerManager : MonoBehaviour
 {
     [SerializeField] private Board board;
-    private Layer layer;
+
 
     void Start()
     {  
@@ -26,10 +26,13 @@ public class LayerManager : MonoBehaviour
             for (int i = 0; i < board.layers.Count; i++)
             {
                 Layer layer = board.transform.GetChild(i).gameObject.GetComponent<Layer>();
-                for(int j = 0; i < layer.gameObject.transform.childCount; i++)
+                
+                for(int j = 0; j < layer.transform.childCount; j++)
                 {
-                    Card card = layer.gameObject.transform.GetChild(i).GetComponent<Card>();    
-                    card.gameObject.GetComponent<SpriteRenderer>().sortingOrder = j;
+                    
+                    Card card = layer.transform.GetChild(j).GetComponent<Card>();    
+                    card.GetComponent<SpriteRenderer>().sortingOrder = i;
+
                 }
                 
 
