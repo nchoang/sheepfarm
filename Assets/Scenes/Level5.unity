@@ -1754,6 +1754,22 @@ MonoBehaviour:
   - {fileID: 646332781}
   - {fileID: 1517168282}
   - {fileID: 1680472422}
+  cards:
+  - {fileID: 9102346873364446125, guid: dcbbcedb8b7746147b95955863d2dd4f, type: 3}
+  - {fileID: 5339972414493245061, guid: a4c48ebe97d70604ab37ad38bf275e75, type: 3}
+  - {fileID: 3842322027843604700, guid: 933b281e6267fbc468c20eb28f412666, type: 3}
+  - {fileID: 922877359050296612, guid: 4e06bd61ec87fee47bb14c8c17a9ffec, type: 3}
+  - {fileID: 2771465939028632398, guid: feeb5a1c51594584f90c22d71a247c34, type: 3}
+  - {fileID: 5136481986021708388, guid: f0fc8af1216d1e046bb47529d85db6dc, type: 3}
+  - {fileID: 7509914197841074486, guid: f0da802348f1ed14f9a789685da8d430, type: 3}
+  - {fileID: 3707804184716134856, guid: 503a00ad1494ce14eaba0d6e15af6a75, type: 3}
+  - {fileID: 1190233899886115678, guid: eb76e1351e89fb24fa4cc2d967446651, type: 3}
+  - {fileID: 5339972414493245061, guid: 4af6135b1b03e824fb59d376692f4390, type: 3}
+  - {fileID: 6387637056848187137, guid: 491a9dc2a3cd00c43ae485ad3711e2d7, type: 3}
+  - {fileID: 4371220084527302139, guid: 73e078e98be38634c87ad7b5d94eeba4, type: 3}
+  - {fileID: 2710763839095413696, guid: e296e12ba5d6aba40bfa21ac266d3d3c, type: 3}
+  - {fileID: 8940920455674892020, guid: 49f85f2c7979db64aa234b73f8b7622d, type: 3}
+  - {fileID: 5180920838556599249, guid: 51aacb076bc10614cae8327850629dd8, type: 3}
 --- !u!4 &603231704
 Transform:
   m_ObjectHideFlags: 0
@@ -3777,6 +3793,7 @@ GameObject:
   - component: {fileID: 1193240335}
   - component: {fileID: 1193240337}
   - component: {fileID: 1193240336}
+  - component: {fileID: 1193240338}
   m_Layer: 0
   m_Name: lose_popup_canvas
   m_TagString: Untagged
@@ -3845,6 +3862,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193240334}
   m_CullTransparentMesh: 1
+--- !u!223 &1193240338
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193240334}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: -954406797
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1228944052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5047,7 +5085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.x

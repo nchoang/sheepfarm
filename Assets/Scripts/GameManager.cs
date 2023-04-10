@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         masks = BarnManager.sharedInstance.barn.masks;
         this.enabled = true;
+        
     }
 
     // Update is called once per frame
