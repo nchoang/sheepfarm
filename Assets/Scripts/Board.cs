@@ -96,8 +96,8 @@ public class Board : MonoBehaviour
         {
             totalNumOfCards += layer.GetCountChild();
         }
-        
-      
+
+        Debug.Log(totalNumOfCards);
         return totalNumOfCards;
     }
 
