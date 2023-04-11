@@ -32,6 +32,7 @@ public class LayerManager : MonoBehaviour
                     
                     Card card = layer.transform.GetChild(j).GetComponent<Card>();    
                     card.GetComponent<SpriteRenderer>().sortingOrder = i;
+                    
 
                 }
                 
