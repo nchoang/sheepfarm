@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     List<GameObject> masks;
     public Board board;
 
+    [HideInInspector]
+    bool oldSystem = false;
+
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
     [SerializeField] private GameObject winningPopup;
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         masks = BarnManager.sharedInstance.barn.masks;
         this.enabled = true;
-        
+
     }
 
     // Update is called once per frame
@@ -86,22 +89,29 @@ public class GameManager : MonoBehaviour
     //kiem tra cac group empty khong ? 
     public bool CheckEmptyAllGroup(Board board)
     {
-        //List<GameObject> cardGroups = board.cardGroups;
-        if (board.transform.childCount == 0) return true;
-        else return false;
-        // int countEmptyGroup = 0;
-        // foreach (GameObject cardGroup in cardGroups)
-        // {
-        //     if (cardGroup.transform.childCount == 0)
-        //     {
-        //         countEmptyGroup++;
-        //     }
-        // }
-        // if (countEmptyGroup == board.cardGroups.Count)
-        // {
-        //     return true;
-        // }
-        // return false;
+
+        if (board.transform.childCount > 3)
+        {
+            oldSystem = true;
+        }
+
+        if (oldSystem)
+        {
+            if (board.transform.childCount == 0) return true;
+            else return false;
+        }
+        else
+        {
+            bool winning = true;
+            foreach (Transform child in board.transform)
+            {
+                if (child.childCount != 0 && child.gameObject.TryGetComponent<Layer>(out Layer temp) == true)
+                {
+                    winning = false;
+                }
+            }
+            return winning;
+        }
     }
 
     public void PauseGame()
