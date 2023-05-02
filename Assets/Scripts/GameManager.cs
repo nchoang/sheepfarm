@@ -68,13 +68,22 @@ public class GameManager : MonoBehaviour
             int countFull = 0;
             foreach (GameObject mask in masks)
             {
-                if (mask.transform.childCount != 0)
+                if (mask.transform.childCount > 0)
                 {
+                   
                     countFull++;
+                    Debug.Log(countFull);
+
                 }
+                
             }
             if (countFull == masks.Count)
             {
+                Dictionary<Sprite, int> sprites = CountSprites();
+                if(checkSpriteToDelete(sprites))
+                {
+                    return false;
+                }
                 return true;
             }
             return false;
@@ -83,6 +92,43 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("MASK NULL");
         }
+        return false;
+
+
+
+    }
+
+    private Dictionary<Sprite, int> CountSprites()
+    {
+        Dictionary<Sprite, int> sprites = new Dictionary<Sprite, int>();
+
+        foreach (GameObject mask in masks)
+        {
+            if (mask.transform.childCount != 0)
+            {
+                Sprite sprite = mask.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                if (sprites.ContainsKey(sprite))
+                    sprites[sprite] = sprites[sprite] + 1;
+                else
+                    sprites.Add(sprite, 1);
+            }
+        }
+
+        return sprites;
+    }
+
+    private bool checkSpriteToDelete(Dictionary<Sprite, int> sprites)
+    {
+        List<Sprite> spritesToDelete = new List<Sprite>();
+
+        foreach (var sprite in sprites)
+        {
+            if (sprite.Value >= 3)
+            {
+                return true;
+            }
+        }
+
         return false;
     }
 
@@ -113,6 +159,8 @@ public class GameManager : MonoBehaviour
             return winning;
         }
     }
+
+
 
     public void PauseGame()
     {
