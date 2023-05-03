@@ -2249,11 +2249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.013706848
+      value: -0.14185342
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44629318
+      value: -1.9584213
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3131,7 +3131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739512190c92399488c8b15e58b3911c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 90
+  TimeLeft: 60
   TimerOn: 0
   TimerTxt: {fileID: 2105097253}
 --- !u!114 &915326203
@@ -3218,11 +3218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: -0.36814657
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -1.6521282
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4983,7 +4983,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5103,11 +5103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25
+      value: -0.3781466
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19
+      value: -1.702128
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5723,11 +5723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: -0.36814657
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: -1.6521282
       objectReference: {fileID: 0}
     - target: {fileID: 7337966554439030399, guid: 9c6e36d1b37068b4f815be7794d8a4b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6599,12 +6599,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1566598117}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 1
+        m_MethodName: ReloadScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6774,7 +6774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEVEL 5
+  m_text: LEVEL 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6205d2f1df00f94f8b55efaca7af79b, type: 2}
   m_sharedMaterial: {fileID: 442926233657088183, guid: e6205d2f1df00f94f8b55efaca7af79b, type: 2}
