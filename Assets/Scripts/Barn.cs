@@ -46,7 +46,10 @@ public class Barn : MonoBehaviour
 
         DeleteCards(spritesToDelete);
 
+        
         RestackCards();
+        
+        
     }
 
     private Dictionary<Sprite, int> CountSprites()
@@ -141,6 +144,9 @@ public class Barn : MonoBehaviour
         return mask.transform.GetChild(0).gameObject.GetComponent<Card>();
     }
 
+    
+
+   
     private IEnumerator MoveCard(Card card, GameObject mask, float speed)
     {
         float elapsedTime = 0.0f;
@@ -149,7 +155,7 @@ public class Barn : MonoBehaviour
         {
             Vector3 moveDir = mask.transform.position;
             card.transform.position = Vector3.Lerp(card.transform.position, moveDir, elapsedTime / speed);
-            Debug.Log(Time.deltaTime);
+            //Debug.Log(Time.deltaTime);
             elapsedTime += 0.016f;
             yield return null;
 

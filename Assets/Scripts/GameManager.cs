@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     List<GameObject> masks;
     public Board board;
 
+    [HideInInspector]
+    bool oldSystem = false;
+
     [SerializeField] private VideoPlayer winningVideo;
     [SerializeField] private GameObject winningRawImage;
     [SerializeField] private GameObject winningPopup;
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         masks = BarnManager.sharedInstance.barn.masks;
         this.enabled = true;
-        
+
     }
 
     // Update is called once per frame
@@ -65,13 +68,22 @@ public class GameManager : MonoBehaviour
             int countFull = 0;
             foreach (GameObject mask in masks)
             {
-                if (mask.transform.childCount != 0)
+                if (mask.transform.childCount > 0)
                 {
+                   
                     countFull++;
+                    Debug.Log(countFull);
+
                 }
+                
             }
             if (countFull == masks.Count)
             {
+                Dictionary<Sprite, int> sprites = CountSprites();
+                if(checkSpriteToDelete(sprites))
+                {
+                    return false;
+                }
                 return true;
             }
             return false;
@@ -81,28 +93,74 @@ public class GameManager : MonoBehaviour
             Debug.Log("MASK NULL");
         }
         return false;
+
+
+
+    }
+
+    private Dictionary<Sprite, int> CountSprites()
+    {
+        Dictionary<Sprite, int> sprites = new Dictionary<Sprite, int>();
+
+        foreach (GameObject mask in masks)
+        {
+            if (mask.transform.childCount != 0)
+            {
+                Sprite sprite = mask.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+                if (sprites.ContainsKey(sprite))
+                    sprites[sprite] = sprites[sprite] + 1;
+                else
+                    sprites.Add(sprite, 1);
+            }
+        }
+
+        return sprites;
+    }
+
+    private bool checkSpriteToDelete(Dictionary<Sprite, int> sprites)
+    {
+        List<Sprite> spritesToDelete = new List<Sprite>();
+
+        foreach (var sprite in sprites)
+        {
+            if (sprite.Value >= 3)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     //kiem tra cac group empty khong ? 
     public bool CheckEmptyAllGroup(Board board)
     {
-        //List<GameObject> cardGroups = board.cardGroups;
-        if (board.transform.childCount == 0) return true;
-        else return false;
-        // int countEmptyGroup = 0;
-        // foreach (GameObject cardGroup in cardGroups)
-        // {
-        //     if (cardGroup.transform.childCount == 0)
-        //     {
-        //         countEmptyGroup++;
-        //     }
-        // }
-        // if (countEmptyGroup == board.cardGroups.Count)
-        // {
-        //     return true;
-        // }
-        // return false;
+
+        if (board.transform.childCount > 3)
+        {
+            oldSystem = true;
+        }
+
+        if (oldSystem)
+        {
+            if (board.transform.childCount == 0) return true;
+            else return false;
+        }
+        else
+        {
+            bool winning = true;
+            foreach (Transform child in board.transform)
+            {
+                if (child.childCount != 0 && child.gameObject.TryGetComponent<Layer>(out Layer temp) == true)
+                {
+                    winning = false;
+                }
+            }
+            return winning;
+        }
     }
+
+
 
     public void PauseGame()
     {
