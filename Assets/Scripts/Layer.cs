@@ -12,6 +12,4 @@ public class Layer : MonoBehaviour
     {
         return this.transform.childCount;
     }
-
-
 }

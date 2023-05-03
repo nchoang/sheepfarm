@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
                 {
                    
                     countFull++;
-                    Debug.Log(countFull);
+                    //Debug.Log(countFull);
 
                 }
                 
@@ -136,28 +136,35 @@ public class GameManager : MonoBehaviour
     public bool CheckEmptyAllGroup(Board board)
     {
 
-        if (board.transform.childCount > 3)
-        {
-            oldSystem = true;
-        }
+        //if (board.transform.childCount > 3)
+        //{
+        //    oldSystem = true;
+        //}
 
-        if (oldSystem)
+        //if (oldSystem)
+        //{
+        //    if (board.transform.childCount == 0) return true;
+        //    else return false;
+        //}
+        //else
+        //{
+        //    bool winning = true;
+        //    foreach (Transform child in board.transform)
+        //    {
+        //        if (child.childCount != 0 && child.gameObject.TryGetComponent<Layer>(out Layer temp) == true)
+        //        {
+        //            winning = false;
+        //        }
+        //    }
+        //    return winning;
+        //}
+
+        if(board.gameObject.transform.childCount != 0)
         {
-            if (board.transform.childCount == 0) return true;
-            else return false;
+            return false;
         }
-        else
-        {
-            bool winning = true;
-            foreach (Transform child in board.transform)
-            {
-                if (child.childCount != 0 && child.gameObject.TryGetComponent<Layer>(out Layer temp) == true)
-                {
-                    winning = false;
-                }
-            }
-            return winning;
-        }
+        return true;
+
     }
 
 

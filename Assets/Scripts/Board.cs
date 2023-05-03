@@ -13,21 +13,48 @@ public class Board : MonoBehaviour
     private int[] frequencies;
     private int[] cardReplaceFreq;
 
+    
+
 
     private void Start()
     {
         frequencies = new int[cards.Count];
-        frequencies = RandomFrequency(frequencies);
-        indices = FindIndexWithSum(frequencies, GetTotalCardInBoard());
+        
+        while(FindSumFreq(frequencies) != GetNumOfCardInBoard())
+        {
+            frequencies = RandomFrequency(frequencies);
+        }
+        
+
+        foreach(int i in frequencies)
+        {
+            Debug.Log(i);
+        }
+     
+        indices = FindIndexWithSum(frequencies, GetNumOfCardInBoard());
+       
         cardReplaceFreq = new int[cards.Count];
 
         for (int i = 0; i < layers.Count; i++)
         {
             Layer layer = layers[i];
             ReplaceCard(layer, frequencies, indices, cardReplaceFreq);
+            
         }
-       
         
+        
+    }
+
+    private void Update()
+    {
+        foreach(Layer layer in layers)
+        {
+            if(layer.gameObject.transform.childCount == 0)
+            {
+                Destroy(layer.gameObject);
+                layers.Remove(layer);
+            }
+        }
     }
 
     private void ReplaceCard(Layer layer1, int[] frequencies1, List<int> indices1, int[] cardReplaceFreq1)
@@ -36,25 +63,32 @@ public class Board : MonoBehaviour
         int[] frequencies = frequencies1;
         List<int> indices = indices1;
         int[] cardReplaceFreq = cardReplaceFreq1;
-        
 
+        
 
         List<GameObject> cardsToReplace = GetAllChildCard(layer);
         for(int i = 0; i < cardsToReplace.Count; i++)
         {
+           
             bool foundReplacement = false;
             GameObject card = cardsToReplace[i];
             int randomIndex;
-            while(!foundReplacement && indices.Count > 0)
+            Debug.Log(indices.Count);
+            Debug.Log(foundReplacement);
+            while (!foundReplacement && indices.Count > 0)
             {
+                Debug.Log("Done");
+               
                 randomIndex = UnityEngine.Random.Range(indices.Min(), indices.Max() + 1);
-
+                
                 if (cardReplaceFreq[randomIndex] < frequencies[randomIndex])
                 {
+                    
                     GameObject cardReplace = cards[randomIndex];
                     cardReplaceFreq[randomIndex] += 1;
                     card.GetComponent<SpriteRenderer>().sprite = cardReplace.GetComponent<SpriteRenderer>().sprite;
                     foundReplacement = true;
+                    
                 }
 
                 else
@@ -89,7 +123,7 @@ public class Board : MonoBehaviour
         return cards;
     }
 
-    private int GetTotalCardInBoard()
+    private int GetNumOfCardInBoard()
     {
         int totalNumOfCards = 0;
         foreach(Layer layer in layers)
@@ -121,32 +155,52 @@ public class Board : MonoBehaviour
 
     private List<int> FindIndexWithSum(int[] frequencies, int sum)
     {
+        Debug.Log(sum);
         List<int> ans = new List<int>();
-        int sum_tmp = 0;
-        int left = 0;
-        for(int right = 0; right < frequencies.Length; right++)
+        if (sum % 3 == 0)
         {
-            sum_tmp += frequencies[right];
-            while(sum_tmp > sum)
+            int sum_tmp = 0;
+            int left = 0;
+            for (int right = 0; right < frequencies.Length; right++)
             {
-                sum_tmp -= frequencies[left];
-                left++;
-            }
-            if (sum_tmp == sum)
-            {
-                for (int i = left; i <= right; i++)
+                sum_tmp += frequencies[right];
+                Debug.Log(sum_tmp);
+                while (sum_tmp > sum)
                 {
-                    ans.Add(i);
+                    sum_tmp -= frequencies[left];
+                    Debug.Log(sum_tmp);
+                    left++;
                 }
-                break;
                 
+                if (sum_tmp == sum)
+                {
+                    Debug.Log(sum_tmp);
+                    for (int i = left; i <= right; i++)
+                    {
+                        ans.Add(i);
+                    }
+                    break;
+
+                }
+                
+
+
+
+
             }
-
-            
-
+           
         }
         return ans;
+    }
 
+    private int FindSumFreq(int[] frequencies)
+    {
+        int sum = 0;
+        foreach(int freq in frequencies)
+        {
+            sum += freq;    
+        }
+        return sum;
     }
 
    

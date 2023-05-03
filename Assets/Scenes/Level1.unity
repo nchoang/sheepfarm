@@ -4766,7 +4766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0755677f5a7b8141a20eacec5291da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveCardSpeed: 5
+  moveCardSpeed: 0.25
   restackCardSpeed: 1
   masks:
   - {fileID: 2091714741}
